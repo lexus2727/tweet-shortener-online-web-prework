@@ -20,14 +20,14 @@ end
 def word_substituter(tweet)
  tweet.split.map { |word| 
  dictionary[word.downcase] || word }.join(" ")
+  end
  end
-# end
  
  def bulk_tweet_shortener(tweet)
    tweet.map do |phrase|
  puts word_substituter(phrase)
+  end
  end
- #end
  
  def selective_tweet_shortener(tweet)
    tweet.split(" ").map do |phrase|
