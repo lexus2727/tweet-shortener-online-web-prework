@@ -39,7 +39,7 @@ def word_substituter(tweet)
      end
    end
   end
- end
+ #end
  
  def shortened_tweet_truncator(tweet)
    tweet.split(" ").map do |phrase|
