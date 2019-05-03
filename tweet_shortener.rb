@@ -45,3 +45,10 @@ def word_substituter(tweet)
    tweet.split(" ").map do |phrase|
      if phrase.length > 140 
        word_substituter(phrase) [0 ..140]
+       + "..."
+     else
+       phrase
+      end
+    end.join(" ") 
+  end
+     
