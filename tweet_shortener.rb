@@ -33,7 +33,7 @@ def word_substituter(tweet)
    tweet.split(" ").map do |phrase|
      if phrase.length > 140
        word_substituter(phrase)
-       elsif phrase.length <= 130
+       elsif phrase.length <= 140
        phrase
      end
    end
