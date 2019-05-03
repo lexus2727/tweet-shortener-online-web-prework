@@ -16,6 +16,7 @@ def dictionary
   }
 end
 
+#my shorten tweets method
 def word_substituter(tweet)
  tweet.split.map { |word| 
  dictionary[word.downcase] || word }.join(" ")
@@ -29,3 +30,12 @@ def word_substituter(tweet)
  #end
  
  def selective_tweet_shortener
+   tweet.split(" ").map do |phrase|
+     if phrase.length > 140
+       word_substituter(phrase)
+       elsif phrase.length <= 140
+       phrase
+     end
+   end
+  end
+ end
