@@ -21,4 +21,6 @@ def word_substituter(tweet)
  dictionary[word.downcase] || word }.join(" ")
  end
  end
+ 
+ def bul_tweet_shortener(array)
    
