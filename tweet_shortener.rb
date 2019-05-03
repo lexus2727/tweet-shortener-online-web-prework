@@ -22,5 +22,9 @@ def word_substituter(tweet)
  end
  end
  
- def bul_tweet_shortener(array)
-   
+ def bulk_tweet_shortener(array)
+   tweet.split.map { |word| 
+ dictionary[word.downcase] || word }.join(" ")
+ puts bulk_tweet_shortener(array)
+ end
+ end
